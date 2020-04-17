@@ -7,4 +7,4 @@ rabbitmq实现延时消息的两种方式
 
 #### 微信(Wechat Pay)
 
-![donation-wechatpay](/assets/img/donate-wechatpay.png)
+![donation-wechatpay](http://www.mixfate.com/assets/donate-wechatpay.png)

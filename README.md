@@ -68,6 +68,21 @@ spring:
     }
 ```
 
+## 3、两种实现方式比较
+
+### 延时队列
+```
+mvn clean compile exec:exec -Dexec.executable="java" -Dexec.args="-cp %classpath com.hugesoft.Application  --spring.rabbitmq.host=192.168.88.100 --spring.profiles.active=queue
+```
+![delay-queue](/assets/img/delay-queue.png)
+
+
+### 延时交换机
+```
+mvn clean compile exec:exec -Dexec.executable="java" -Dexec.args="-cp %classpath com.hugesoft.Application  --spring.rabbitmq.host=192.168.88.100 --spring.profiles.active=exchange"
+```
+![delay-exchange](/assets/img/delay-exchange.png)
+
 
 ### 赞赏(Donation)
 

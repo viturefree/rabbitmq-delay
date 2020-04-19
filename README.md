@@ -61,6 +61,13 @@ spring:
 
 定义两个队列并声明为延时`exchnage`，`delayed-exchange`需`rabbitmq`延时插件支持，在发送消息时带上`x-delay`参数指定过期时间；
 
+```
+    public void sendDelayExchangeMessage(String message) {
+        log.info("send message {}", message);
+        processor.output().send(MessageBuilder.withPayload(message).setHeader("x-delay",20000).build());
+    }
+```
+
 
 ### 赞赏(Donation)
 

@@ -84,6 +84,8 @@ mvn clean compile exec:exec -Dexec.executable="java" -Dexec.args="-cp %classpath
 ![delay-exchange](/assets/img/delay-exchange.png)
 
 
+使用队列的方式只能用于所有消息的过期时间均相同的情况下，延时中的消息总数可以延时队列中查看到，使用交换机插件的方式更加灵活，可以针对每个消息设置不同的超时，适应更多的业务场景，延时中的消息总数可以延时的交换机中查看到；
+
 ### 赞赏(Donation)
 
 

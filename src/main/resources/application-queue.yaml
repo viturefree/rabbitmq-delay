@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: delay_message_queue_input
+          group: test-service
+        output:
+          destination: delay_message_queue_output
+          producer:
+            required-groups: test-service
+      rabbit:
+        bindings:
+          input:
+            consumer:
+              exchangeType: direct
+          output:
+            producer:
+              ttl: 3000
+              autoBindDlq: true
+              deadLetterExchange: delay_message_queue_input
+              deadLetterQueueName: delay_message_queue_input.test-service

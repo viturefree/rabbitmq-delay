@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: delay_message_exchange
+          group: test-service
+        output:
+          destination: delay_message_exchange
+      rabbit:
+        bindings:
+          input:
+            consumer:
+              delayed-exchange: true
+          output:
+            producer:
+              delayed-exchange: true

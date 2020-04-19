@@ -1,0 +1,17 @@
+server:
+  port: 8888
+
+logging:
+  level:
+    root: INFO
+    com.hugesoft: DEBUG
+
+spring:
+  profiles:
+    active: exchange
+  rabbitmq:
+    host: 192.168.2.6
+    port: 5672
+    username: test
+    password: 123456
+    virtual-host: /test
